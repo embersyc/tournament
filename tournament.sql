@@ -6,6 +6,13 @@
 -- You can write comments in this file by starting them with two dashes, like
 -- these lines here.
 
+-- Delete the tournament database if it already exists, then create the
+-- tournament database and connect to it.
+
+DROP DATABASE IF EXISTS tournament;
+CREATE DATABASE tournament;
+\c tournament;
+
 CREATE TABLE players (
 	player_id SERIAL,
 	name TEXT NOT NULL,
